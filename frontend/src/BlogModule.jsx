@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useState,useEffect } from 'react';
-const API_URL = 'http://localhost:3001/api/posts'
+const API_URL = 'https://miniblog-backend-mozj.onrender.com/api/posts'
 
 
 export default function BlogModule() {
