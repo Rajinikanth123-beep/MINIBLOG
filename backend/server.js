@@ -5,7 +5,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const postRoutes = require('./routers/postRoutes.js');
 const authRoutes = require('./routers/authRoutes.js');
-const User = require('./models/UserModel.js');
+const User = require('./Models/UserModel.js');
 
 
 const { errorHandler } = require('./middleware/errorhadler.js');
