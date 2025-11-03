@@ -1,12 +1,15 @@
 
+
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const PostRoutes = require('./routers/postRoutes.js');
+const postRoutes = require('./routers/postRoutes.js');
 const authRoutes = require('./routers/authRoutes.js');
-const User = require('../Models/UserModel.js');
+const User = require('./models/UserModel.js');
 
-const {errorHandler} = require('./middleware/errorMiddleware.js');
+
+const { errorHandler } = require('./middleware/errorhadler.js');
+
 require('dotenv').config();
 
 const app = express();

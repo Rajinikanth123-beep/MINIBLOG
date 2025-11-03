@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useState,useEffect } from 'react';
-const API_URL = 'http://localhost:3001/api/posts'
+const API_URL = 'https://miniblog-backend-mozj.onrender.com/api/posts'
 
 
 export default function BlogModule() {
@@ -74,8 +74,13 @@ export default function BlogModule() {
     setContent(post.content);
     setAuthor(post.author);
   }
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    navigate('/auth');
+  }
   return (
     <div className="app-container">
+      <button onClick={handleLogout} style={{float: 'right', padding:'10px', margin:'10px'}}>Logout</button>
       <div className="form-container">
         <h2>Create a New Post</h2>
         <form className='form-section' onSubmit={handleSubmit}>
