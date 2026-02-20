@@ -1,14 +1,15 @@
-const cloudinary = require('cloudinary').v2;
+const cloudinary = require('../config/cloudinary'); // import configured file
 const { CloudinaryStorage } = require('multer-storage-cloudinary');
 const multer = require('multer');
-    
+
 const storage = new CloudinaryStorage({
-  cloudinary: cloudinary,
+  cloudinary,
   params: {
-    folder: 'MINIBLOG', // your folder name
+    folder: 'MINIBLOG',
     allowed_formats: ['jpg', 'png', 'jpeg'],
   },
 });
 
 const upload = multer({ storage });
+
 module.exports = upload;
