@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const API_URL = 'https://miniblog-backend-mozj.onrender.com/api/posts';
+const API_URL = 'https://miniblog-backend-api.onrender.com/api/posts';
 
 export default function BlogModule() {
   const [title, setTitle] = useState('');

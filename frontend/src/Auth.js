@@ -19,7 +19,7 @@ export default function AuthPage() {
 
     try {
       const response = await fetch(
-        'https://miniblog-backend-mozj.onrender.com/api/auth/register',
+        'https://miniblog-backend-api.onrender.com/api/auth/register',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -55,7 +55,7 @@ export default function AuthPage() {
 
     try {
       const response = await fetch(
-        'https://miniblog-backend-mozj.onrender.com/api/auth/login',
+        'https://miniblog-backend-api.onrender.com/api/auth/login',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
